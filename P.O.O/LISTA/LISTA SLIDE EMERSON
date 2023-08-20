@@ -1,1 +1,48 @@
 
+SLIDE p1:
+
+//criando classe Veiculo
+public class Veiculo {
+
+    int numPag;
+    int capcComb;
+    int consumo;
+    
+}
+
+
+
+
+
+//criando classe para usar veiculo
+public class UsarVeiculo {
+    public static void main(String[] args) {
+
+        Veiculo a1 = new Veiculo();
+        Veiculo a2 = new Veiculo();
+        int aut1, aut2;
+
+        a1.numPag = 5;
+        a1.capcComb = 55;
+        a1.consumo = 14;
+        a2.numPag = 3;
+        a2.capcComb = 60;
+        a2.consumo = 11;
+
+        aut1 = a1.capcComb * a1.consumo;
+        aut2 = a2.capcComb * a2.consumo;
+
+        System.out.printf("Automóvel 1: Capacidade de %d pessoas e Autonomia de %d!\n", a1.numPag, aut1);
+        System.out.printf("Automóvel 2: Capacidade de %d pessoas e Autonomia de %d!\n", a2.numPag, aut2);
+    }
+}
+
+
+
+
+
+
+
+SLIDE p2:
+
+
