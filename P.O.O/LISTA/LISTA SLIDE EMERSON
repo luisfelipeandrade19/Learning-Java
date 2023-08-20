@@ -45,4 +45,117 @@ public class UsarVeiculo {
 
 SLIDE p2:
 
+(Classe Cliente):
+
+
+
+
+public class Cliente {
+
+    //Criando variaveis
+    String nome, endereço, novoEndereço;
+    String CPF;
+
+    //Criando Metodos
+    void setNome(String name) {
+        this.nome = name;
+    }
+
+    void setCPF(String nmrCpf) {
+        this.CPF = nmrCpf;
+    }
+
+    void setEndereço(String end) {
+        this.endereço = end;
+    }
+
+    void setNovoEndereço(String nvEnd) {
+        this.novoEndereço = nvEnd;
+    }
+
+    String getNome() {
+        return nome;
+    }
+
+    String getCPF() {
+        return CPF;
+    }
+
+    String getEndereço() {
+        return endereço;
+    }
+
+    String getNovoEndereço() {
+        return novoEndereço;
+    }
+
+}
+
+
+
+(Classe Att)
+
+
+//importando biblioteca
+import java.util.Scanner;
+
+//criando Classe e Main
+public class Att {
+
+    public static void main(String[] args) {
+
+//Criando Scanner para receber os Novos endereços
+        Scanner sc1 = new Scanner(System.in);
+        Scanner sc2 = new Scanner(System.in);
+
+//Instanciando Cliente
+        Cliente c1 = new Cliente();
+        Cliente c2 = new Cliente();
+
+//Atribuindo dados
+        c1.setCPF("62039906398");
+        c1.setNome("Felipe");
+        c1.setEndereço("Rua Ze");
+
+        c2.setCPF("63487600013");
+        c2.setNome("Zeze");
+        c2.setEndereço("Rua Peba");
+
+//Printando os dados
+        System.out.println("O nome do cliente 1 é:");
+        System.out.println(c1.getNome());
+
+        System.out.println("O CPF do clinte 1 é:");
+        System.out.println(c1.getCPF());
+
+        System.out.println("O endereço do clinte 1 é:");
+        System.out.println(c1.getEndereço());
+
+        System.out.println("O nome do cliente 2 é:");
+        System.out.println(c2.getNome());
+
+        System.out.println("O CPF do clinte 2 é:");
+        System.out.println(c2.getCPF());
+
+        System.out.println("O endereço do cliente 2 é:");
+        System.out.println(c2.getEndereço());
+
+//Atualizando endereço(nextLine() para ler toda linha)
+        System.out.println("Digite o Novo endereço do cliente 1: ");
+        c1.novoEndereço = sc1.nextLine();
+
+        System.out.println("Digite o Novo endereço do cliente 2: ");
+        c2.novoEndereço = sc2.nextLine();
+
+//Printando novo endereço
+        System.out.println("O novo endereço do cliente 1 é: ");
+        System.out.println(c1.novoEndereço);
+
+        System.out.println("O novo endereço do cliente 2 é: ");
+        System.out.println(c2.novoEndereço);
+
+    }
+    
+}
+
 
