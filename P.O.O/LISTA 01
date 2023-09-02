@@ -1,1 +1,152 @@
+QUESTÃO 01:
 
+import java.util.Scanner;
+public class Idade {
+    
+    public static void main(String args[]){
+
+        //Escreva um programa que leia a idade de uma pessoa e determine se ela é menor de idade
+        //(menor que 18 anos) ou maior de idade (igual ou maior que 18 anos). Imprima a resposta
+        //na tela. O nome da classe deve ser “Idade”.
+
+        int idade;
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.printf("Digite sua idade:");
+        idade = scanner.nextInt();
+
+        if(idade < 18){
+            System.out.println("Menor que 18 anos");
+        } else{
+            System.out.println("Maior ou igual que 18 anos");
+        }
+
+    }
+
+}
+
+
+QUESTÃO 02:
+
+import java.util.Scanner;
+
+public class MaiorEMenor {
+    
+    public static void main(String args[]){
+         
+        //Escreva um programa que leia dois números inteiros do usuário e determine qual é o maior.
+        //Imprima a resposta na tela. O nome da classe deve ser “MaiorEMenor”.
+        int n1, n2;
+        Scanner scanner01 = new Scanner(System.in);
+        Scanner scanner02 = new Scanner(System.in);
+
+        System.out.println("Digite um numero:");
+        n1 = scanner01.nextInt();
+
+        System.out.println("Digite outro numero:");
+        n2 = scanner02.nextInt();
+
+        if(n1 < n2){
+            System.out.printf(	"%d é maior que %d", n2, n1);
+        }else{
+            System.out.printf(	"%d é maior que %d", n1, n2);
+        }
+    }
+}
+
+
+QUESTÃO 03:
+
+import java.util.Scanner;
+public class ParOuImpar {
+    public static void main(String args[]){
+        
+        //Escreva um programa que leia um número inteiro do usuário e determine se ele é par ou
+        //ímpar. Imprima a resposta na tela. O nome da classe deve ser “ParOuImpar”.
+        
+        Scanner scanner = new Scanner(System.in);
+         int valor;
+         int rsp;
+
+         System.out.println("Digite um número");
+         valor = scanner.nextInt();
+
+         rsp = valor % 2;
+         
+         if(rsp != 0){
+            System.out.println("O número escolhido é impar!");
+         } else{
+            System.out.println("O número escolhido é par!");
+         }
+
+    }
+}
+
+
+QUESTÃO 04:
+
+import java.util.Scanner;
+public class NomeDoMes {
+    public static void main(String args[]){
+        
+        //Escreva um programa que leia o nome de um mês e imprima o número correspondente a
+        //esse mês. Por exemplo, se o usuário digitar "janeiro", o programa deve imprimir "1". Se o
+        //usuário digitar "dezembro", o programa deve imprimir "12". Se o usuário digitar um nome
+        //inválido, o programa deve imprimir uma mensagem de erro. O nome da classe deve ser
+        //“NomeDoMes”.
+        
+        Scanner scanner = new Scanner(System.in);
+
+        String nome;
+        int mes;
+        
+        System.out.println("Digite um mes");
+        nome = scanner.nextLine().toLowerCase();
+
+        switch (nome) {
+            case "janeiro":
+                mes = 1;
+                break;
+            case "fevereiro":
+                mes = 2;
+                break;
+            case "março":
+                mes = 3;
+                break;
+            case "abril":
+                mes = 4;
+                break;
+            case "maio":
+                mes = 5;
+                break;
+            case "junho":
+                mes = 6;
+                break;
+            case "julho":
+                mes = 7;
+                break;
+            case "agosto":
+                mes = 8;
+                break;
+            case "setembro":
+                mes = 9;
+                break;
+            case "outubro":
+                mes = 10;
+                break;
+            case "novembro":
+                mes = 11;
+                break;
+            case "dezembro":
+                mes = 12;
+                break;
+            default:
+                System.out.println("Nome de mês inválido. Por favor, digite um nome de mês válido.");
+                return;
+        }
+        System.out.println("O número correspondente a " + nome + " é " + mes);
+    }
+        
+    
+}
