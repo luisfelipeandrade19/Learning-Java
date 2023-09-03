@@ -150,3 +150,302 @@ public class NomeDoMes {
         
     
 }
+
+
+QUESTÃO 05:
+
+public class NumPares {
+    public static void main(String args []){
+        //Escreva um programa que imprima na tela todos os números pares entre 1 e 50. O nome da 
+        //classe deve ser “NumPares”.
+
+        for(int i = 1; i < 50; i++){
+            if(i%2 <= 0){
+                System.out.println(i);
+            }
+        }
+    }
+}
+
+QUESTÃO 06:
+
+import java.util.Scanner;;
+public class Media {
+    public static void main(String args[]){
+
+        //Escreva um programa que calcule a média aritmética de 10 números inteiros informados 
+        //pelo usuário. O nome da classe deve ser “Media”.
+
+        int totalNum = 10;
+        int soma = 0;
+
+        Scanner scanner = new Scanner(System.in);
+    
+        for(int i = 0; i < totalNum; i++){
+            System.out.print("Número " + (i + 1) + ": ");
+            int numero = scanner.nextInt();
+            soma += numero;
+        }
+        double media = (double) soma / totalNum;
+
+        System.out.println("A media é: " + media) ;
+
+        scanner.close();
+    }
+        
+}
+
+QUESTÃO 07:
+
+import java.util.*;
+
+public class Notas {
+    public static void main(String args[]){
+        //Escreva um programa que solicite ao usuário a quantidade de alunos em uma turma, e em 
+        //seguida peça as notas desses alunos. Ao final, o programa deve calcular e exibir a média da 
+        //turma. O nome da classe deve ser “Notas”.
+
+        Scanner scanner = new Scanner(System.in);
+
+        int soma = 0;
+        int totalAlunos;
+
+        System.out.println("Qual o total de alunos?");
+        totalAlunos = scanner.nextInt();
+
+        for(int i=0; i < totalAlunos; i++){
+            System.out.print("Nota do aluno " + (i + 1) + ": ");
+            int numero = scanner.nextInt();
+            soma+=numero;
+        }
+
+        double media = (double) soma / totalAlunos;
+
+        System.out.println("A media é: " + media);
+
+        scanner.close();
+    }
+
+}
+
+QUESTÃO 8:
+
+import java.util.*;
+public class Tabuada {
+    public static void main(String args[]){
+        //Escreva um programa que solicite ao usuário a digitação de um número inteiro. O programa 
+        //deve exibir na tela a tabuada de multiplicação deste número. O nome da classe deve ser 
+        //“Tabuada”
+
+        int v = 1;
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Digite um número: ");
+        int num = scanner.nextInt();
+
+        while(v < 11){
+            System.out.println(+ num + " x " + v + ":" + (num * v));
+            v++;
+        }
+        scanner.close();
+    }
+
+}
+
+QUESTÃO 09:
+
+import java.util.*;
+public class Soma {
+    public static void main(String args[]){
+
+        //Escreva um programa que solicite ao usuário a digitação de vários números inteiros, e que 
+        //pare de pedir novos números quando o usuário digitar o número zero. Ao final, o programa 
+        //deve exibir a soma dos números digitados. O nome da classe deve ser “Soma”.
+
+        Scanner scanner = new Scanner(System.in);
+
+        int numero;
+        int soma = 0;
+    
+       
+
+        System.out.println("Digite um numero:");
+        
+        while(true){
+            numero = scanner.nextInt();
+            if(numero == 0){
+                break;
+            }
+            soma += numero;
+        }
+
+        System.out.println("A soma dos números digitados é: " + soma);
+        
+        scanner.close();
+
+    }
+}
+
+QUESTÃO 10:
+
+import java.util.*;
+
+public class Primo {
+    public static void main(String[]args){
+    
+        //Escreva um programa que solicite ao usuário a digitação de um número inteiro, e que 
+        //verifique se este número é um número primo. Se for, exiba na tela a mensagem "O número 
+        //X é primo". Caso contrário, exiba a mensagem "O número X não é primo", onde X é o número 
+        //digitado pelo usuário. O programa deve parar quando um número primo for digitado. O 
+        //nome da classe deve ser “Primo”
+
+         Scanner scanner = new Scanner(System.in);
+
+        int numero;
+        
+        while(true){
+            System.out.println("Digite um número inteiro: ");
+            numero = scanner.nextInt();
+            
+            if(numPrimo(numero)){
+                System.out.println("O número "+ numero + " é primo!");
+                break;
+            } else{
+                System.out.println("O número "+ numero + " é não é primo!");
+            }
+        }
+
+        scanner.close();
+    }   
+        
+    //Método para descobrir se é primo!
+    
+    public static boolean numPrimo(int num){
+            if(num <= 1){
+                return false;
+            }
+            if(num <= 3){
+                return true;
+            }
+            if(num % 2 == 0 || num % 3 == 0){
+                return false;
+            }
+            
+            int div = 5;
+            while (div * div <= num) {
+                if (num % div == 0 || num % (div + 2) == 0) {
+                    return false;
+                }
+                div += 6;
+            }
+            return true;
+        }
+        
+}
+
+QUESTÃO 11:
+
+import java.util.*;
+public class Senha {
+    public static void main(String[]args){
+
+        //Escreva um programa que registra uma senha. Solicite ao usuário a digitação de uma senha. 
+        //O programa deve repetir a solicitação até que o usuário acerte a senha, exibindo na tela a 
+        //mensagem "Senha correta!". O nome da classe deve ser “Senha”.
+
+        Scanner scanner = new Scanner(System.in);
+        String senha = "felipe123";
+        String senhaUsuario;
+
+        do{
+            System.out.println("Digite uma senha: ");
+            senhaUsuario = scanner.nextLine();
+
+            if(senhaUsuario.equals(senha)){
+                System.out.println("Senha Correta!");
+                break;
+            } else{
+                System.out.println("Senha incorreta! Tente novamente.");
+            }
+        }while(senhaUsuario != senha);
+
+        scanner.close();
+    }
+}
+
+
+QUESTÃO 12:
+
+import java.util.*;
+public class SomaInteiros {
+    public static void main(String args[]){
+        //Escreva um programa que solicite ao usuário a digitação de um número inteiro N, e que 
+        //calcule e exiba na tela a soma de todos os números de 1 a N. O nome da classe deve ser 
+        //“SomaInteiros”
+
+        Scanner scanner = new Scanner(System.in);
+
+        int n;
+        int aux = 1;
+        int soma = 0;
+        
+        System.out.println("Digite um número");
+        n = scanner.nextInt();
+
+        do{
+            soma += aux;
+            aux++;
+        }while(aux <= n);
+
+        System.out.println("A soma dos números até "+ n +" é "+ soma);
+        
+        scanner.close();
+    }
+}
+
+QUESTÃO 13:
+
+import java.util.*;
+public class Quadrado {
+    
+    //Método para saber se é quadrado perfeito
+    public static boolean ehQuadradoPerfeito(int numero){
+            if(numero < 0){
+                return false;
+
+            }
+
+            int raiz = (int) Math.sqrt(numero);
+            return raiz * raiz == numero;
+    }
+
+    public static void main(String args []){
+        // Escreva um programa que solicite ao usuário a digitação de um número inteiro, e que 
+        //verifique se este número é um quadrado perfeito. Se for, exiba na tela a mensagem "O 
+        //número X é um quadrado perfeito". Caso contrário, exiba a mensagem "O número X não é 
+        //um quadrado perfeito", onde X é o número digitado pelo usuário. O programa deve parar
+        //quando um número quadrado perfeito for digitado. O nome da classe deve ser “Quadrado”.
+
+       
+        boolean quadradoPerfeito = false;
+
+        Scanner scanner = new Scanner(System.in);
+
+        do{
+            System.out.println("Digite um número inteiro; ");
+            int numero = scanner.nextInt();
+
+            if(ehQuadradoPerfeito(numero)){
+                quadradoPerfeito = true;
+                System.out.println("O número "+ numero +" é quadrado perfeiro");
+                break;
+            }else {
+                System.out.println("O número "+ numero +" não é quadrado perfeito");
+            }
+            
+        }while(!quadradoPerfeito);
+        scanner.close();
+    }
+
+}
